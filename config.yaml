@@ -1,0 +1,20 @@
+data:
+  symbols: ['AAPL', 'MSFT', 'GOOGL']  
+  start_date: '2010-01-01'
+  end_date: '2025-08-27'  
+  features: ['Close', 'Volume', 'Dividends']  
+  window_size: 60  
+  test_size: 0.2
+
+model:
+  lstm_hidden_size: 128
+  lstm_num_layers: 2
+  dropout: 0.2
+  learning_rate: 0.001
+  batch_size: 32
+  epochs: 100
+
+paths:
+  raw_data_dir: data/raw
+  processed_data_dir: data/processed
+  model_save_path: models/lstm_model.pth
